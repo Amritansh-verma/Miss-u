@@ -27,6 +27,9 @@
             cursor: pointer;
             transition: 0.3s;
         }
+        #next {
+            background-color: purple;
+        }
         #yes {
             background-color: green;
         }
@@ -35,29 +38,42 @@
         }
     </style>
 </head>
-<body>
+<body id="page1">
 
-    <h1>Do you miss me too, Rasmalai?</h1>
+    <h1>I am missing you, Rasmalai! 🥺</h1>
     <div class="gif-container">
-        <img src="https://media.tenor.com/-Sg8NjoKAn4AAAAi/milk-mocha.gif" alt="Milk Mocha Bear GIF">
+        <img src="https://tenor.com/en-GB/view/mintyai4-gif-3507138305399026323" alt="Missing You GIF">
     </div>
     <div class="buttons">
-        <button id="yes" onclick="loveYou()">Yes</button>
-        <button id="no" onclick="thinkAgain()">No</button>
+        <button id="next" onclick="goToPage2()">➡ Next</button>
     </div>
 
     <script>
+        function goToPage2() {
+            document.body.innerHTML = `
+                <h1>Do you miss me too, Chotudon? 🥺</h1>
+                <div class="gif-container">
+                    <img src="https://tenor.com/en-GB/view/milk-and-mocha-gif-14082164036316044018" alt="Crying GIF">
+                </div>
+                <div class="buttons">
+                    <button id="yes" onclick="loveYou()">Yes</button>
+                    <button id="no" onclick="thinkAgain()">No</button>
+                </div>
+            `;
+        }
+
         function loveYou() {
             document.body.innerHTML = `
-                <h1>Love you, Chotudon! ❤️</h1>
-                <img src="https://media.tenor.com/10ZIXIwtwLoAAAAi/milk-and-mocha-love.gif" alt="Milk Mocha Love GIF">
+                <h1>Cutest ho tum, Chotudon! 🥰❤️</h1>
+                <h2>Love you, Chotulal! 😘</h2>
+                <img src="https://tenor.com/en-GB/view/milk-and-mocha-milk-and-mocha-bear-gif-8604663346218614199">
             `;
         }
 
         function thinkAgain() {
             alert("Think again, Chotulal! 🥺");
             let yesBtn = document.getElementById("yes");
-            yesBtn.style.fontSize = (parseInt(window.getComputedStyle(yesBtn).fontSize) + 5) + "px";
+            yesBtn.style.fontSize = (parseInt(window.getComputedStyle(yesBtn).fontSize) + 10) + "px";
         }
     </script>
 
