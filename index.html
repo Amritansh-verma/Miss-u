@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missing You</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffb6c1; /* Beautiful Pink */
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .gif-container {
+            margin: 20px 0;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        #yes {
+            background-color: green;
+        }
+        #no {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Do you miss me too, Rasmalai?</h1>
+    <div class="gif-container">
+        <img src="https://media.tenor.com/-Sg8NjoKAn4AAAAi/milk-mocha.gif" alt="Milk Mocha Bear GIF">
+    </div>
+    <div class="buttons">
+        <button id="yes" onclick="loveYou()">Yes</button>
+        <button id="no" onclick="thinkAgain()">No</button>
+    </div>
+
+    <script>
+        function loveYou() {
+            document.body.innerHTML = `
+                <h1>Love you, Chotudon! ❤️</h1>
+                <img src="https://media.tenor.com/10ZIXIwtwLoAAAAi/milk-and-mocha-love.gif" alt="Milk Mocha Love GIF">
+            `;
+        }
+
+        function thinkAgain() {
+            alert("Think again, Chotulal! 🥺");
+            let yesBtn = document.getElementById("yes");
+            yesBtn.style.fontSize = (parseInt(window.getComputedStyle(yesBtn).fontSize) + 5) + "px";
+        }
+    </script>
+
+</body>
+</html>
